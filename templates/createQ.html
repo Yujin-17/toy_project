@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>문제 생성하기</title>
+
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+
+        body {
+            background-color: #eae8e2;
+        }
+
+        #wrap {
+            width: 95%;
+            text-align: left;
+            max-width: 500px;
+            align-content: center;
+            margin: auto;
+        }
+
+        h1 {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        .btn {
+            float: right;
+            margin-left: 10px;
+        }
+
+        #float1 {
+            width: 450px;
+            float: right;
+            margin-bottom: 7px;
+        }
+
+        #float2 {
+            width: 450px;
+            float: right;
+            margin-bottom: 3px;
+        }
+
+        #float3 {
+            width: 450px;
+            float: right;
+        }
+
+        #float4 {
+            width: 450px;
+            float: right;
+        }
+        .form-check{
+            margin-bottom: 40px;
+        }
+
+
+    </style>
+    <script>
+        $(document).ready(function () {
+
+        })
+
+        function save() {
+
+            if (document.getElementById("input_check1").checked) {
+                document.getElementById("input_check_hidden1").disabled = true;
+                alert(document.getElementById("input_check_hidden1").id, document.getElementById("input_check_hidden1").value)
+                let correctNum = 1
+                let question = document.getElementById('question1').innerText
+                let question_name = document.getElementById('floatingInput').value
+                let question1 =document.getElementById('formGroupExampleInput1').value
+                let question2 =document.getElementById('formGroupExampleInput2').value
+                let question3 =document.getElementById('formGroupExampleInput3').value
+                let question4 =document.getElementById('formGroupExampleInput4').value
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/create',
+                    data: {question_give: question, num_give: correctNum, question_name_give:question_name
+                            , question1_give :question1, question2_give :question2
+                            , question3_give :question3, question4_give :question4},
+                    success: function (response) {
+                        alert(response['msg'])
+                        window.location.reload()
+                    }
+                })
+            }
+
+            if (document.getElementById("input_check2").checked) {
+                document.getElementById("input_check_hidden2").disabled = true;
+                alert(document.getElementById("input_check_hidden2").id, document.getElementById("input_check_hidden2").value)
+                let correctNum = 2
+                let question = document.getElementById('question1').innerText
+                let question_name = document.getElementById('floatingInput').value
+                let question1 =document.getElementById('formGroupExampleInput1').value
+                let question2 =document.getElementById('formGroupExampleInput2').value
+                let question3 =document.getElementById('formGroupExampleInput3').value
+                let question4 =document.getElementById('formGroupExampleInput4').value
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/create',
+                    data: {question_give: question, num_give: correctNum, question_name_give:question_name
+                            , question1_give :question1, question2_give :question2
+                            , question3_give :question3, question4_give :question4},
+                    success: function (response) {
+                        alert(response['msg'])
+                        window.location.reload()
+                    }
+                })
+            }
+
+            if (document.getElementById("input_check3").checked) {
+                document.getElementById("input_check_hidden3").disabled = true;
+                alert(document.getElementById("input_check_hidden3").id, document.getElementById("input_check_hidden3").value)
+                let correctNum = 3
+                let question = document.getElementById('question1').innerText
+                let question_name = document.getElementById('floatingInput').value
+                let question1 =document.getElementById('formGroupExampleInput1').value
+                let question2 =document.getElementById('formGroupExampleInput2').value
+                let question3 =document.getElementById('formGroupExampleInput3').value
+                let question4 =document.getElementById('formGroupExampleInput4').value
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/create',
+                    data: {question_give: question, num_give: correctNum, question_name_give:question_name
+                            , question1_give :question1, question2_give :question2
+                            , question3_give :question3, question4_give :question4},
+                    success: function (response) {
+                        alert(response['msg'])
+                        window.location.reload()
+                    }
+                })
+            }
+
+            if (document.getElementById("input_check4").checked) {
+                document.getElementById("input_check_hidden4").disabled = true;
+                alert(document.getElementById("input_check_hidden4").id, document.getElementById("input_check_hidden4").value)
+                let correctNum = 4
+                let question = document.getElementById('question1').innerText
+                let question_name = document.getElementById('floatingInput').value
+                let question1 =document.getElementById('formGroupExampleInput1').value
+                let question2 =document.getElementById('formGroupExampleInput2').value
+                let question3 =document.getElementById('formGroupExampleInput3').value
+                let question4 =document.getElementById('formGroupExampleInput4').value
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/create',
+                    data: {question_give: question, num_give: correctNum,  question_name_give:question_name
+                            , question1_give :question1, question2_give :question2
+                            , question3_give :question3, question4_give :question4},
+                    success: function(response) {
+                        alert(response['msg'])
+                        window.location.reload()
+                    }
+                })
+            }
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+<h1>문제 생성하기</h1>
+<div id="wrap">
+    <h3 id="question1">문제</h3>
+    <div class="form-floating mb-3">
+        <input type="" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">문제를 입력해주세요.</label>
+    </div>
+    <div class="form-check">
+
+        <input type="checkbox" name="input_check" value='1' id="input_check1"/>
+        <input type="hidden" name="input_check" value='0' id="input_check_hidden1"/>
+        <div id="float1">
+            <input type="text" class="form-control" id="formGroupExampleInput1">
+        </div>
+    </div>
+    <div class="form-check">
+
+        <input type="checkbox" name="input_check" value='1' id="input_check2"/>
+        <input type="hidden" name="input_check" value='0' id="input_check_hidden2"/>
+        <div id="float2">
+            <input type="text" class="form-control" id="formGroupExampleInput2">
+        </div>
+    </div>
+    <div class="form-check">
+
+        <input type="checkbox" name="input_check" value='1' id="input_check3"/>
+        <input type="hidden" name="input_check" value='0' id="input_check_hidden3"/>
+        <div id="float3">
+            <input type="text" class="form-control" id="formGroupExampleInput3">
+        </div>
+    </div>
+    <div class="form-check">
+
+        <input type="checkbox" name="input_check" value='1' id="input_check4"/>
+        <input type="hidden" name="input_check" value='0' id="input_check_hidden4"/>
+        <div id="float4">
+            <input type="text" class="form-control" id="formGroupExampleInput4">
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="location.href='/'">뒤로가기</button>
+    <button type="button" class="btn btn-warning" id="save" onclick="save();">저장</button>
+
+
+</div>
+</body>
+</html>
